@@ -7,8 +7,11 @@ export class Post {
   loveIts: number;  
   created_at: Date
 
-  constructor()
+  constructor(title:string, content:string, love:number=0)
   {
+    this.title = title;
+    this.content = content;
+    this.loveIts = love;
     this.created_at = new Date();
   }
 };
@@ -27,24 +30,10 @@ export class AppComponent {
   constructor()
   {
     this.posts = [
-      {
-        title:"Post 0",
-        content: "Ceci est un premier post",
-        loveIts:0,
-        created_at: new Date()
-      },
-      {
-        title:"Post 1",
-        content: "Ceci est un deuxième post",
-        loveIts:1,
-        created_at: new Date()
-      },
-      {
-        title:"Post 2",
-        content: "Ceci est un troisième post",
-        loveIts:0,
-        created_at: new Date()
-      },
+      new Post("Premier Post", "Ceci est mon premier post"),
+      new Post("Deuxième Post", "Ceci est mon deuxième post", 10),
+      new Post("Deuxième Post", "Ceci est mon troisième post"),
+      new Post("Troisième Post", "Ceci est mon quatrième post", 2),
     ]
   }
 }
