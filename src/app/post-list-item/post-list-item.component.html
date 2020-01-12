@@ -1,0 +1,15 @@
+<div class="alert" [ngClass]="{'alert-primary':post.loveIts>1 && post.loveIts<5, 'alert-danger':post.loveIts<1, 'alert-success':post.loveIts>5}" role="alert">
+    <h4>{{post.title}}</h4>
+    <div class="pull-right">
+        {{post.created_at | date:'d/MM/yyyy, h:m:s'}}
+    </div>
+    <div>
+        {{post.content}}
+        <div>
+            <br>
+            <button type="button" class="btn btn-primary" (click)="loveIt(1);">Love it</button> 
+            <button type="button" class="btn btn-danger" (click)="loveIt(-1);">Don't love it</button>
+            <i class="fas fa-cloud"></i>
+        </div>
+    </div>
+</div>
