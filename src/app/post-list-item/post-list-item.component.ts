@@ -15,8 +15,7 @@ export class PostListItemComponent implements OnInit {
 
   public loveIt(i)
   {
-    if(this.post.loveIts+i<=1 && this.post.loveIts+1>=1)
-      this.post.loveIts += i;
+    this.post.loveIts += i;
   }
   ngOnInit() {
   }

@@ -30,10 +30,9 @@ export class AppComponent {
   constructor()
   {
     this.posts = [
-      new Post("Premier Post", "Ceci est mon premier post"),
-      new Post("Deuxième Post", "Ceci est mon deuxième post", 10),
+      new Post("Deuxième Post", "Ceci est mon deuxième post", 1),
       new Post("Deuxième Post", "Ceci est mon troisième post"),
-      new Post("Troisième Post", "Ceci est mon quatrième post", 2),
+      new Post("Troisième Post", "Ceci est mon quatrième post", -1),
     ]
   }
 }

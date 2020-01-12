@@ -1,4 +1,4 @@
-<div class="alert" [ngClass]="{'alert-primary':post.loveIts>1 && post.loveIts<5, 'alert-danger':post.loveIts<1, 'alert-success':post.loveIts>5}" role="alert">
+<div class="alert" [ngClass]="{'alert-success':post.loveIts>0, 'alert-danger':post.loveIts<0, 'alert-primary':post.loveIts==0}" role="alert">
     <h4>{{post.title}}</h4>
     <div class="pull-right">
         {{post.created_at | date:'d/MM/yyyy, h:m:s'}}
